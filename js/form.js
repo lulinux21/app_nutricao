@@ -49,3 +49,7 @@ function montaTd(dado, classe) {
   td.classList.add(classe);
   return td;
 }
+
+function validaPaciente(paciente) {
+   
+}
