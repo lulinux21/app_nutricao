@@ -20,6 +20,8 @@ botaoAdicionar.addEventListener("click", function (event) {
 
   tabela.appendChild(pacienteTr);
 
+  adicionaPacienteNaTabela(paciente);
+
   form.reset(); // Limpa os dados dos inputs
 
   var mensagemErro = document.querySelector("#mensagens-erro");
@@ -97,4 +99,10 @@ function validaPaciente(paciente) {
   }
 
   return erros;
+}
+
+function adicionaPacienteNaTabela(paciente) {
+  var pacienteTr = montaTr(paciente);
+  var tabela = document.querySelector("#tabela-pacientes");
+  tabela.appendChild(pacienteTr);
 }
